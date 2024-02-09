@@ -9,7 +9,7 @@ pipeline {
             # leave spaces where you want them around the parameters. They'll be trimmed.
             # we let the build run with the default name
             H/5 * * * * %GREETING=Hola;PLANET=Pluto
-            H/7 * * * * %GREETING=Namaste;PLANET=GURU
+            H/5 * * * * %GREETING=Namaste;PLANET=GURU
         ''')
     }
     stages {
