@@ -6,9 +6,10 @@ pipeline {
     }
     triggers {
         parameterizedCron('''
-           # Updated
-            H/3 * * * * %GREETING=Hola;PLANET=Pluto
-            H/3 * * * * %GREETING=Namaste;PLANET=GURU
+           # Everyday at 5 AM
+           0 5 * * * %GREETING=Hola;PLANET=Pluto
+           # Every other day at 5:05 AM
+           5 5 */2 * * %GREETING=Namaste;PLANET=GURU
         ''')
     }
     stages {
